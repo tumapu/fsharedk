@@ -1,0 +1,27 @@
+{
+  "name": "fshare",
+  "version": "1.0.0",
+  "description": "Unofficial Node.js SDK for fshare.vn",
+  "main": "lib/fshare.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node lib/fshare.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/f97/fshare.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/f97/fshare/issues"
+  },
+  "homepage": "https://github.com/f97/fshare#readme",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "got": "^9.6.0"
+  }
+}
