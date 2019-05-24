@@ -9,7 +9,7 @@ test('test getSource', (done) => {
 });
 
 
-test('test getCSRF', () => {
+test('test getCSRF', (done) => {
     sourceFshare = `<!DOCTYPE html>
     <html lang="vi">
     <head>
@@ -19,5 +19,9 @@ test('test getCSRF', () => {
     <body class="mdc-typography">
     </body>
     </html>`
-    expect(common.getSource(sourceFshare)).resolves.toBe('Tt5fLT3et4D7uI9608DqNO5z_5aR_30gQ503ecQVpfQtuA4fBOnc16v5_gnqsdxNoTGrw-KqLU0s8nsRoFD1hw==');
+    common.getCSRF(sourceFshare)
+    .then(data => {
+        expect(data).toBe('Tt5fLT3et4D7uI9608DqNO5z_5aR_30gQ503ecQVpfQtuA4fBOnc16v5_gnqsdxNoTGrw-KqLU0s8nsRoFD1hw==');
+        done();
+    });
 })
