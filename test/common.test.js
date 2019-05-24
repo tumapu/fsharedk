@@ -21,7 +21,7 @@ test('test getCSRF', (done) => {
     </html>`
     common.getCSRF(sourceFshare)
     .then(data => {
-        expect(data).toBe('Tt5fLT3et4D7uI9608DqNO5z_5aR_30gQ503ecQVpfQtuA4fBOnc16v5_gnqsdxNoTGrw-KqLU0s8nsRoFD1hw==');
+        expect(data).toBe('Tt5fLT3et4D7uI9608DqNO5z_5aR_30gQ503ecQVpfQtuA4fBOnc16v5_gnqsdxNoTGrw-KqLU0s8nsRoFD1hw');
         done();
     });
 })
