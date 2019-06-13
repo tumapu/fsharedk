@@ -9,19 +9,19 @@ test('test getSource', (done) => {
 });
 
 
-test('test getCSRF', (done) => {
-    sourceFshare = `<!DOCTYPE html>
-    <html lang="vi">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="csrf-token" content="Tt5fLT3et4D7uI9608DqNO5z_5aR_30gQ503ecQVpfQtuA4fBOnc16v5_gnqsdxNoTGrw-KqLU0s8nsRoFD1hw==">
-    </head>
-    <body class="mdc-typography">
-    </body>
-    </html>`
-    common.getCSRF(sourceFshare)
-    .then(data => {
-        expect(data).toBe('Tt5fLT3et4D7uI9608DqNO5z_5aR_30gQ503ecQVpfQtuA4fBOnc16v5_gnqsdxNoTGrw-KqLU0s8nsRoFD1hw');
-        done();
-    });
-})
+// test('test getCSRF', (done) => {
+//     sourceExpamle = `<!DOCTYPE html>
+//     <html lang="vi">
+//     <head>
+//         <meta charset="UTF-8">
+//         <meta name="csrf-token" content="Tt5fLT3et4D7uI9608DqNO5z_5aR_30gQ503ecQVpfQtuA4fBOnc16v5_gnqsdxNoTGrw-KqLU0s8nsRoFD1hw==">
+//     </head>
+//     <body class="mdc-typography">
+//     </body>
+//     </html>`
+//     common.getCSRF(sourceExpamle)
+//     .then(data => {
+//         expect(data).toBe('Tt5fLT3et4D7uI9608DqNO5z_5aR_30gQ503ecQVpfQtuA4fBOnc16v5_gnqsdxNoTGrw-KqLU0s8nsRoFD1hw');
+//         done();
+//     });
+// })
