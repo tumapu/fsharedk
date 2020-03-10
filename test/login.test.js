@@ -6,12 +6,12 @@ const user = {
   password: 'Jue07023'
 };
 
-const loginSuccessfullyMsg = /Login successfully/;
+const loginSuccessfullyMsg = RegExp('Login successfully');
 
 test('test login API', (done) => {
   login.loginFshare(user)
     .then((response) => {
-      expect(loginSuccessfullyMsg.test(JSON.stringify(response.body))).toBe(true);
+      expect(loginSuccessfullyMsg.test(JSON.stringify(response))).toBe(true);
       done();
     });
 });

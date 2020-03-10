@@ -23,13 +23,13 @@ const user = {
     password:  process.env.FSHARE_PASSWORD
 }
 
-const getDownloadFshareURL = async () =>  {
-    let response = await fsharedk.loginFshare(user);
-    let url = await fsharedk.downloadFile(response, 'https://www.fshare.vn/file/THONZRLCP7K1');
-    return url;
-}
+const getDownloadFshareURL = async (account) => {
+  const { token, session_id: sessionID } = await fsharedk.loginFshare(account);
+  const url = await fsharedk.downloadFile(token, sessionID, 'https://www.fshare.vn/file/NCI7886WRWVIKZ3');
+  return url;
+};
 
-getDownloadFshareURL().then(console.log);
+getDownloadFshareURL().then(console.log); //{ location:: 'http://download802.fshare.vn/dl/KA6H...' }
 
 ```
 
