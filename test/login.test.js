@@ -9,7 +9,7 @@ const user = {
 const loginSuccessfullyMsg = RegExp('Login successfully');
 
 test('test login API', (done) => {
-  login.loginFshare(user)
+  login.login(user)
     .then((response) => {
       expect(loginSuccessfullyMsg.test(JSON.stringify(response))).toBe(true);
       done();

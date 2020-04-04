@@ -24,8 +24,8 @@ const user = {
 }
 
 const getDownloadFshareURL = async (account) => {
-  const { token, session_id: sessionID } = await fsharedk.loginFshare(account);
-  const url = await fsharedk.downloadFile(token, sessionID, 'https://www.fshare.vn/file/xxxx...');
+  const { token, session_id: sessionID } = await fsharedk.login(account);
+  const url = await fsharedk.download(token, sessionID, 'https://www.fshare.vn/file/xxxx...');
   return url;
 };
 
@@ -35,8 +35,8 @@ getDownloadFshareURL().then(console.log); //{ location:: 'http://download802.fsh
 
 ## Methods
 
-> - loginFshare(): Login fshare with you account
-> - downloadFile(res, url): Downloaf file with user logged
+> - login(): Login fshare with you account
+> - download(res, url): Downloaf file with user logged
 
 ## Todo
 
