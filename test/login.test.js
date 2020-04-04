@@ -2,8 +2,8 @@
 const login = require('../lib/login');
 
 const user = {
-  user_email: 'jue07023@cndps.com',
-  password: 'Jue07023'
+  user_email: process.env.FSHARE_EMAIL,
+  password: process.env.FSHARE_PASSWORD
 };
 
 const loginSuccessfullyMsg = RegExp('Login successfully');
