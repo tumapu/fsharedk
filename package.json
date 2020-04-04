@@ -1,6 +1,6 @@
 {
     "name": "fsharedk",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Unofficial Node.js SDK for fshare.vn",
     "main": "lib/login.js",
     "scripts": {
